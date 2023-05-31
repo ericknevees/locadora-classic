@@ -145,8 +145,16 @@ namespace LocadoraClassic.View
                 // Obtém o valor do campo "id" da célula selecionada
                 id = Convert.ToInt32(selectedRow.Cells["Id"].Value);
                 string nome = selectedRow.Cells["Nome"].Value.ToString();
+                string endereco = selectedRow.Cells["endereco"].Value.ToString();
+                string whatsapp = selectedRow.Cells["Whatsapp"].Value.ToString();
+                string CPF = selectedRow.Cells["CPF"].Value.ToString();
+                string RG = selectedRow.Cells["RG"].Value.ToString();
 
                 txtNomeCli.Text = nome;
+                txtEnde.Text = endereco;
+                mkdTxtTel.Text = whatsapp;
+                TxtCpF.Text = CPF;
+                txtRg.Text = RG;
 
                 // Faça o que precisar com o valor do campo "id"
                 // Por exemplo, exiba-o em uma caixa de diálogo

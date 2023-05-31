@@ -30,5 +30,9 @@ namespace LocadoraClassic.VO
         {
             Valor_diaria = valor_diaria;
         }
+        public override string ToString()
+        {
+            return Nome;
+        }
     }
 }
