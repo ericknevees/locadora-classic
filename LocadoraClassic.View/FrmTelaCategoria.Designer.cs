@@ -34,6 +34,8 @@
             this.txtNomecad = new System.Windows.Forms.TextBox();
             this.txtValorDia = new System.Windows.Forms.TextBox();
             this.dGVCat = new System.Windows.Forms.DataGridView();
+            this.btnExcluirCat = new System.Windows.Forms.Button();
+            this.btnAtualizar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dGVCat)).BeginInit();
             this.SuspendLayout();
             // 
@@ -59,7 +61,7 @@
             // 
             this.button1.Location = new System.Drawing.Point(85, 133);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(340, 23);
+            this.button1.Size = new System.Drawing.Size(108, 23);
             this.button1.TabIndex = 2;
             this.button1.Text = "Cadastrar";
             this.button1.UseVisualStyleBackColor = true;
@@ -78,21 +80,45 @@
             this.txtValorDia.Name = "txtValorDia";
             this.txtValorDia.Size = new System.Drawing.Size(338, 20);
             this.txtValorDia.TabIndex = 4;
+            this.txtValorDia.TextChanged += new System.EventHandler(this.txtValorDia_TextChanged);
             // 
             // dGVCat
             // 
             this.dGVCat.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dGVCat.Location = new System.Drawing.Point(58, 174);
+            this.dGVCat.Location = new System.Drawing.Point(85, 171);
             this.dGVCat.Name = "dGVCat";
             this.dGVCat.Size = new System.Drawing.Size(375, 196);
             this.dGVCat.TabIndex = 5;
-            this.dGVCat.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dGVCat.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGVCat_CellDoubleClick);
+            this.dGVCat.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGVCat_CellDoubleClick);
+            // 
+            // btnExcluirCat
+            // 
+            this.btnExcluirCat.Location = new System.Drawing.Point(317, 133);
+            this.btnExcluirCat.Name = "btnExcluirCat";
+            this.btnExcluirCat.Size = new System.Drawing.Size(108, 23);
+            this.btnExcluirCat.TabIndex = 6;
+            this.btnExcluirCat.Text = "Excluir";
+            this.btnExcluirCat.UseVisualStyleBackColor = true;
+            this.btnExcluirCat.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // btnAtualizar
+            // 
+            this.btnAtualizar.Location = new System.Drawing.Point(202, 133);
+            this.btnAtualizar.Name = "btnAtualizar";
+            this.btnAtualizar.Size = new System.Drawing.Size(108, 23);
+            this.btnAtualizar.TabIndex = 7;
+            this.btnAtualizar.Text = "Atualizar";
+            this.btnAtualizar.UseVisualStyleBackColor = true;
+            this.btnAtualizar.Click += new System.EventHandler(this.btnAtualizar_Click);
             // 
             // FrmTelaCategoria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnAtualizar);
+            this.Controls.Add(this.btnExcluirCat);
             this.Controls.Add(this.dGVCat);
             this.Controls.Add(this.txtValorDia);
             this.Controls.Add(this.txtNomecad);
@@ -117,5 +143,7 @@
         private System.Windows.Forms.TextBox txtNomecad;
         private System.Windows.Forms.TextBox txtValorDia;
         private System.Windows.Forms.DataGridView dGVCat;
+        private System.Windows.Forms.Button btnExcluirCat;
+        private System.Windows.Forms.Button btnAtualizar;
     }
 }

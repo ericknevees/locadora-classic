@@ -9,12 +9,17 @@ namespace LocadoraClassic.VO
 {
     public class Categoria
     {
+        public int Id {  get; set; }
         public string Nome {get; set;}
         public string Valor_diaria { get; set;}
 
         public Categoria() 
         { 
-
+            
+        }
+        public Categoria(int id)
+        {
+            Id = id;
         }
         public Categoria(string nome, string valor_diaria)
         {

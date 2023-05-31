@@ -18,7 +18,7 @@ namespace LocadoraClassic.DAL
             //STORED PROCEDURES
             //ADO.NET - biblioteca de banco de dados do .NET
             comando.CommandType = System.Data.CommandType.Text;
-            comando.CommandText = "INSERT INTO genero(nome)values(@nome)";
+            comando.CommandText = "insert into genero(nome)values(@nome)";
             comando.Parameters.Add(new MySqlParameter("@nome",genero.Nome));
             comando.ExecuteNonQuery();
             Conexao.Instance.Close();
@@ -63,6 +63,7 @@ namespace LocadoraClassic.DAL
             // Fechar a conexão
             Conexao.Instance.Close();
         }
+        
         public void ExcluirGenero(int id)
         {
             // Abrir a Conexão
